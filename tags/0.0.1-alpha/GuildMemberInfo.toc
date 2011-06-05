@@ -1,0 +1,12 @@
+## Interface: 40100
+
+## Title: GuildMemberInfo
+## Notes: Interface for addons to include extra information on the GuildMemberInfo frame.
+
+## OptionalDeps: LibStub
+
+## Author: Scotepi
+## Version: @project-version@
+
+embeds.xml
+GuildMemberInfo.lua
