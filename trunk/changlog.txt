@@ -1,0 +1,3 @@
+== 0.1 ==
+* Figured out the focuse of this addon, its now a plugable framework
+* Removed LibStub
