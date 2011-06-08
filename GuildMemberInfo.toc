@@ -8,5 +8,4 @@
 ## Author: Scotepi
 ## Version: @project-version@
 
-embeds.xml
 GuildMemberInfo.lua
