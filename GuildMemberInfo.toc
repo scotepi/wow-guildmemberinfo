@@ -1,4 +1,4 @@
-## Interface: 40100
+## Interface: 40200
 
 ## Title: GuildMemberInfo
 ## Notes: Interface for addons to include extra information on the GuildMemberInfo frame.
