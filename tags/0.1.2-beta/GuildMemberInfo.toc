@@ -1,0 +1,9 @@
+## Interface: 40300
+
+## Title: GuildMemberInfo
+## Notes: Interface for addons to include extra information on the GuildMemberInfo frame.
+
+## Author: Scotepi
+## Version: @project-version@
+
+GuildMemberInfo.lua
