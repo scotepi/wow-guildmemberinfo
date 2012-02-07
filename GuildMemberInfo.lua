@@ -25,6 +25,8 @@ Your frames will be:
 
 ]]
 
+local AuroraF, AuroraC = unpack(Aurora)
+
 -- Start the Addon
 GMI = {};
 GMI.callbacks = {};
@@ -36,10 +38,10 @@ GMI.selected = nil;
 GMI.frame = CreateFrame("Frame", "GMIFrame")
 
 local function OnEvent(self, event, ...)
-	if ( event == 'ADDON_LOADED' ) then
+	if event == 'ADDON_LOADED' then
 		local addon = ...;
 		
-		if ( addon == 'Blizzard_GuildUI') then
+		if addon == 'Blizzard_GuildUI' then
 			
 			-- Create the real frame
 			GMI:CreateGMIFrame();
@@ -58,6 +60,10 @@ function GMI:CreateGMIFrame()
 		GMI.frame:SetPoint("TOPLEFT", GuildMemberDetailFrame, "BOTTOMLEFT", 0, -3);
 		GMI.frame:SetBackdrop(GuildMemberDetailFrame:GetBackdrop());
 		
+        if AuroraF then
+            AuroraF.CreateBD(GMI.frame);
+        end
+        
 		-- Add all of our lines that have been registered so far
 		for name,cb in pairs(GMI.callbacks) do
 			for label,settings in pairs(cb.lines) do
@@ -116,7 +122,7 @@ function GMI:Register(name, settings)
 			
 			-- Make sure we have a label
 			if not line.label then GMI.callbacks[name].lines[label].label = label; end
-			if not line.height then GMI.callbacks[name].lines[label].height = 10; end
+			if not line.height then GMI.callbacks[name].lines[label].height = 12; end
 			if not line.default then GMI.callbacks[name].lines[label].default = ''; end
 			if type(line.text) == 'nil' then GMI.callbacks[name].lines[label].text = true; end
 			
@@ -144,7 +150,7 @@ function GMI:AddLine(name, label)
 	
 	local line = GMI.callbacks[name].lines[label];
 	local default = line.default;
-	local height = line.height or 10;
+	local height = line.height or 12;
 	
 	if not ( name and label and default ) then return end
 	if not GMI.frames[name] then GMI.frames[name] = {}; end
