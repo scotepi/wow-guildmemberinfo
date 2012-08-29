@@ -25,8 +25,6 @@ Your frames will be:
 
 ]]
 
-local AuroraF, AuroraC = unpack(Aurora)
-
 -- Start the Addon
 GMI = {};
 GMI.callbacks = {};
@@ -60,7 +58,8 @@ function GMI:CreateGMIFrame()
 		GMI.frame:SetPoint("TOPLEFT", GuildMemberDetailFrame, "BOTTOMLEFT", 0, -3);
 		GMI.frame:SetBackdrop(GuildMemberDetailFrame:GetBackdrop());
 		
-        if AuroraF then
+        if Aurora then
+            local AuroraF, AuroraC = unpack(Aurora);
             AuroraF.CreateBD(GMI.frame);
         end
         
