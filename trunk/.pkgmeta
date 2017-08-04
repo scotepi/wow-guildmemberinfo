@@ -1,5 +1,5 @@
 package-as: GuildMemberInfo
 
-anual-changelog:
+manual-changelog:
     filename: changelog.txt
     markup-type: textile
