@@ -1,4 +1,4 @@
-## Interface: 70200
+## Interface: 70300
 
 ## Title: GuildMemberInfo
 ## Notes: Interface for addons to include extra information on the GuildMemberInfo frame.
